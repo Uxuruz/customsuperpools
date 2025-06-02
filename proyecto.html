@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Super Pools - Custom Pool Design and Construction</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <a href="/" class="logo">
+            <svg class="logo-icon" aria-label="Custom Super Pools Logo" fill="none" viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M24 4C12.95 4 4 7.25 4 11.27C4 14.01 8.16 16.4 14.31 17.64C8.16 18.88 4 21.26 4 24C4 26.74 8.16 29.12 14.31 30.36C8.16 31.6 4 33.99 4 36.73C4 40.74 12.95 44 24 44C35.05 44 44 40.74 44 36.73C44 33.99 39.84 31.6 33.69 30.36C39.84 29.12 44 26.74 44 24C44 21.26 39.84 18.88 33.69 17.64C39.84 16.4 44 14.01 44 11.27C44 7.25 35.05 4 24 4ZM24 7.5C33.39 7.5 40.5 9.93 40.5 12.5C40.5 15.07 33.39 17.5 24 17.5C14.61 17.5 7.5 15.07 7.5 12.5C7.5 9.93 14.61 7.5 24 7.5ZM24 20.5C33.39 20.5 40.5 22.93 40.5 25.5C40.5 28.07 33.39 30.5 24 30.5C14.61 30.5 7.5 28.07 7.5 25.5C7.5 22.93 14.61 20.5 24 20.5ZM24 33.5C33.39 33.5 40.5 35.93 40.5 38.5C40.5 41.07 33.39 43.5 24 43.5C14.61 43.5 7.5 41.07 7.5 38.5C7.5 35.93 14.61 33.5 24 33.5Z"
+                    fill="currentColor"></path>
+            </svg>
+            <span class="logo-text">Custom Super Pools</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#gallery" class="nav-link">
+                <span class="material-icons">collections</span>
+                <span>Gallery</span>
+            </a>
+            <a href="#process" class="nav-link">
+                <span class="material-icons">engineering</span>
+                <span>Our Process</span>
+            </a>
+            <a href="#contact" class="nav-link">
+                <span class="material-icons">contact_mail</span>
+                <span>Get In Touch</span>
+            </a>
+            <a href="#contact" class="btn btn-primary" style="margin-left: 1rem;">
+                Request Quote
+            </a>
+            <button class="dark-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                <span class="material-icons" id="darkModeIcon">brightness_4</span>
+            </button>
+        </nav>
+
+        <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open mobile menu">
+            <div class="mobile-menu-icon">
+                <span class="mobile-menu-line mobile-menu-line-1"></span>
+                <span class="mobile-menu-line"></span>
+                <span class="mobile-menu-line mobile-menu-line-3"></span>
+            </div>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close mobile menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <nav class="mobile-nav">
+            <a href="#process" class="mobile-nav-link">
+                <span class="material-icons">engineering</span>
+                <span>Our Process</span>
+            </a>
+            <a href="#gallery" class="mobile-nav-link">
+                <span class="material-icons">collections</span>
+                <span>Gallery</span>
+            </a>
+            <a href="#contact" class="mobile-nav-link">
+                <span class="material-icons">contact_mail</span>
+                <span>Get In Touch</span>
+            </a>
+        </nav>
+
+        <div class="mobile-menu-footer">
+            <a href="#quote" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                Request Quote
+            </a>
+            <button class="mobile-dark-toggle" id="mobileDarkModeToggle">
+                <span class="material-icons" id="mobileDarkModeIcon">brightness_4</span>
+                <span>Toggle Theme</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/15556048/15556048-uhd_2560_1440_24fps.mp4"
+                type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fadeInFromBelow">
+                Dive Into <span style="color: #7dd3fc;">Luxury</span>
+            </h1>
+            <p class="hero-subtitle animate-fadeInFromBelow animate-delay-1">
+                Custom-designed pools that redefine your backyard experience.
+            </p>
+            
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <h2 class="section-title">Pool Gallery & Portfolio</h2>
+        <p class="section-subtitle">Discover inspiration from our finest completed projects.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://res.cloudinary.com/dsfgqyp3d/image/upload/v1748751507/WhatsApp_Image_2025-05-28_at_22.07.59_1_vhhiht.jpg"
+                    alt="Serene Infinity Pool" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-item-title">Serene Infinity</h3>
+                    <p class="gallery-item-desc">Size: 12m x 5m | Features: Vanishing edge, LED lighting</p>
+                    <a href="#" class="gallery-item-link" data-project="serene-infinity">
+                        View Project
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://res.cloudinary.com/dsfgqyp3d/image/upload/v1748751507/WhatsApp_Image_2025-05-28_at_22.11.36_vmvl0n.jpg"
+                    alt="Tropical Lagoon Oasis" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-item-title">Lagoon Oasis</h3>
+                    <p class="gallery-item-desc">Size: Irregular (approx. 150sqm) | Features: Rock waterfall, natural
+                        stone</p>
+                    <a href="#" class="gallery-item-link" data-project="lagoon-oasis">
+                        View Project
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://res.cloudinary.com/dsfgqyp3d/image/upload/v1748822955/Image_2025-05-28_at_22.11.33_kytwxk.jpg"
+                    alt="Urban Chic Lap Pool" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-item-title">Urban Lap Pool</h3>
+                    <p class="gallery-item-desc">Size: 15m x 3m | Features: Swim jets, minimalist design</p>
+                    <a href="#" class="gallery-item-link" data-project="urban-lap">
+                        View Project
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-cta">
+            <a href="https://drive.google.com/file/d/19GxXbkOICNBtd1FpMj3I7-EesvB2n-De/view?usp=sharing" class="btn btn-primary">
+                See Similar Designs
+            </a>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section">
+            <h2 class="section-title">How We Work: Your Dream Pool Journey</h2>
+            <p class="section-subtitle">A simple, transparent process to bring your vision to life.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="material-icons">lightbulb</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">
+                            <span class="timeline-number">01</span>
+                            <h3 class="timeline-title">Initial Consultation & Vision</h3>
+                        </div>
+                        <p class="timeline-description">
+                            We start by listening. Tell us your dreams, ideas, and how you envision your perfect pool.
+                            We'll discuss your space, budget, and desired features. This is where the magic begins!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="material-icons">draw</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">
+                            <span class="timeline-number">02</span>
+                            <h3 class="timeline-title">Design & 3D Visualization</h3>
+                        </div>
+                        <p class="timeline-description">
+                            Our expert designers translate your vision into a stunning 3D model. You'll see your pool
+                            come to life, allowing for tweaks and refinements until it's absolutely perfect.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="material-icons">construction</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">
+                            <span class="timeline-number">03</span>
+                            <h3 class="timeline-title">Permitting & Construction</h3>
+                        </div>
+                        <p class="timeline-description">
+                            We handle all necessary permits and paperwork. Then, our skilled craftsmen begin
+                            construction,
+                            using only the highest quality materials and techniques.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="material-icons">celebration</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-step">
+                            <span class="timeline-number">04</span>
+                            <h3 class="timeline-title">Handover & Enjoyment</h3>
+                        </div>
+                        <p class="timeline-description">
+                            The moment you've been waiting for! We'll walk you through your new pool, explain its
+                            features
+                            and maintenance, and then it's time to dive in and start making memories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <a href="#contact" class="btn btn-primary">
+                    Schedule Your Consultation Today
+                    <span class="material-icons" style="vertical-align: middle; margin-left: 8px;">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <h2 class="cta-title">Ready to Dive In?</h2>
+        <p class="cta-text">
+            Let's discuss your vision and bring your dream pool to life. Schedule a complimentary
+            consultation with our design experts today.
+        </p>
+        <a href="#quote" class="cta-button">
+            Book Your Free Consultation
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="/" class="footer-logo">
+                    <svg class="footer-logo-icon" aria-label="Custom Super Pools Logo" fill="none" viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24 4C12.95 4 4 7.25 4 11.27C4 14.01 8.16 16.4 14.31 17.64C8.16 18.88 4 21.26 4 24C4 26.74 8.16 29.12 14.31 30.36C8.16 31.6 4 33.99 4 36.73C4 40.74 12.95 44 24 44C35.05 44 44 40.74 44 36.73C44 33.99 39.84 31.6 33.69 30.36C39.84 29.12 44 26.74 44 24C44 21.26 39.84 18.88 33.69 17.64C39.84 16.4 44 14.01 44 11.27C44 7.25 35.05 4 24 4ZM24 7.5C33.39 7.5 40.5 9.93 40.5 12.5C40.5 15.07 33.39 17.5 24 17.5C14.61 17.5 7.5 15.07 7.5 12.5C7.5 9.93 14.61 7.5 24 7.5ZM24 20.5C33.39 20.5 40.5 22.93 40.5 25.5C40.5 28.07 33.39 30.5 24 30.5C14.61 30.5 7.5 28.07 7.5 25.5C7.5 22.93 14.61 20.5 24 20.5ZM24 33.5C33.39 33.5 40.5 35.93 40.5 38.5C40.5 41.07 33.39 43.5 24 43.5C14.61 43.5 7.5 41.07 7.5 38.5C7.5 35.93 14.61 33.5 24 33.5Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <span class="footer-logo-text">Custom Super Pools</span>
+                </a>
+                <p class="footer-about">
+                    Your dream oasis, expertly crafted. We design and build exceptional custom pools
+                    and spas with a passion for quality and innovation since 2005.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact</h3>
+                <ul class="footer-list">
+                    <li>
+                        <a href="tel:5551234567" class="footer-link">
+                            <span class="material-icons">phone</span>
+                            786-326-9879
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@customsuperpools.com" class="footer-link">
+                            <span class="material-icons">email</span>
+                            info@customsuperpools.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">
+                            <span class="material-icons">location_on</span>
+                           Houston 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-quick-links">
+                    <li><a href="#process" class="footer-quick-link">Our Process</a></li>
+                    <li><a href="#gallery" class="footer-quick-link">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Get in Touch</h3>
+                <p class="footer-about">
+                    Dive into our world of stunning pool designs, maintenance tips, and exclusive offers.
+                    Subscribe to our newsletter and never miss a splash!
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/customsuperpools?igsh=Z282Yml2amgwM20w" class="social-link" aria-label="Instagram">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="current-year">2024</span> Custom Super Pools. All Rights Reserved.
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal Carrusel -->
+    <div class="carousel-modal" id="carouselModal">
+        <button class="close-carousel" id="closeCarousel">&times;</button>
+        <div class="carousel-container">
+            <button class="carousel-arrow prev" id="prevSlide">&lsaquo;</button>
+
+            <div class="carousel-slide" id="carouselSlide">
+                <!-- Las imágenes se insertarán dinámicamente aquí -->
+            </div>
+
+            <button class="carousel-arrow next" id="nextSlide">&rsaquo;</button>
+        </div>
+        <div class="carousel-caption">
+            <h3 id="carouselTitle">Lagoon Oasis</h3>
+            <p id="carouselDescription">Size: Irregular (approx. 150sqm) | Features: Rock waterfall, natural stone</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
