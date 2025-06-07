@@ -219,7 +219,38 @@
                     "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1748822953/Image_2025-05-28_at_22.11.34_2_t8n9vn.jpg",
                     "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1748822954/Image_2025-05-28_at_22.11.34_3_se3ovu.jpg",
                 ]
-            }
+            },
+            "AquaLuxe": {
+                title: "AquaLuxe",
+                description: "Size: 15m x 3m | Features: Swim jets, minimalist design",
+                images: [
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749278561/WhatsApp_Image_2025-06-02_at_20.13.34_yymnov.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749278561/WhatsApp_Image_2025-06-02_at_20.13.34_3_xyzwtj.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749278561/WhatsApp_Image_2025-06-02_at_20.13.34_1_dh1sa1.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749278560/WhatsApp_Image_2025-06-02_at_20.13.34_2_vlmnyv.jpg",
+                ]
+            },
+            "SplashZone": {
+                title: "SplashZone",
+                description: "| Features: Swim jets, minimalist design",
+                images: [
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749279113/WhatsApp_Image_2025-06-02_at_20.14.23_ik6lkm.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749279114/WhatsApp_Image_2025-06-02_at_20.14.23_1_wxj7dr.jpg",
+                ]
+            },
+            "other": {
+                title: "",
+                description: "| Features: Swim jets, minimalist design",
+                images: [
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749280203/Image_2025-06-02_at_19.42_1_catvts.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749280207/Image_2025-06-02_at_19.42_2_xtzwra.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749280206/Image_2025-06-02_at_19.42.32_3_xtstm0.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749280200/Image_2025-06-02_at_19.42.32_6_sgyep0.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749280209/Image_2025-06-02_at_19.42.32_5_evauzz.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749280204/Image_2025-06-02_at_19.42.32_2_rbkxga.jpg",
+                    "https://res.cloudinary.com/dsfgqyp3d/image/upload/v1749280199/Image_2025-06-02_at_19.42.32_4_eds5ru.jpg",
+                ]
+            },
         };
 
         class ImageCarousel {
